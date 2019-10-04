@@ -1,0 +1,11 @@
+<a  title="{{ title }}" 
+    class="{{prefix}}cta-url" 
+    href="{{ cta_url }}" 
+    target="{{ open_new_tab is defined and open_new_tab == true ? '_blank' : '' }}" 
+    rel="nofollow">
+    <img 
+        class="{{prefix}}img-responsive {{prefix}}cta-img" 
+        alt="{{ title }}" 
+        src="{{ md.mobile() and mobile.img_url ? mobile.img_url : img_url }}"
+    >
+</a>

@@ -1,0 +1,121 @@
+@prefix: ~'__formBuilder__';
+
+.@{prefix}wrapper {
+    .@{prefix}img-responsive {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+    // Refer to: https://getbootstrap.com/docs/3.4/css/#responsive-utilities-classes
+    .@{prefix}hidden {
+        display: none;
+    }
+    .@{prefix}hidden-xs {
+        display: none;
+    }
+    .@{prefix}hidden-sm {
+        display: block;
+    }
+    .@{prefix}hidden-md {
+        display: block;
+    }
+    .@{prefix}visible-xs {
+        display: block;
+    }
+    .@{prefix}visible-sm {
+        display: block;
+    }
+    .@{prefix}visible-md {
+        display: none;
+    }
+}
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .@{prefix}hidden-xs {
+        display: block;
+    }
+    .@{prefix}hidden-sm {
+        display: none;
+    }
+    .@{prefix}hidden-md {
+        display: block;
+    }
+    .@{prefix}visible-xs {
+        display: none;
+    }
+    .@{prefix}visible-sm {
+        display: block;
+    }
+    .@{prefix}visible-md {
+        display: none;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+    .@{prefix}hidden-xs {
+        display: block;
+    }
+    .@{prefix}hidden-sm {
+        display: block;
+    }
+    .@{prefix}hidden-md {
+        display: none;
+    }
+    .@{prefix}visible-xs {
+        display: none;
+    }
+    .@{prefix}visible-sm {
+        display: none;
+    }
+    .@{prefix}visible-md {
+        display: block;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .@{prefix}hidden-xs {
+        display: block;
+    }
+    .@{prefix}hidden-sm {
+        display: block;
+    }
+    .@{prefix}hidden-md {
+        display: block;
+    }
+    .@{prefix}visible-xs {
+        display: none;
+    }
+    .@{prefix}visible-sm {
+        display: none;
+    }
+    .@{prefix}visible-md {
+        display: block;
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+    .@{prefix}hidden-xs {
+        display: block;
+    }
+    .@{prefix}hidden-sm {
+        display: block;
+    }
+    .@{prefix}hidden-md {
+        display: block;
+    }
+    .@{prefix}visible-xs {
+        display: none;
+    }
+    .@{prefix}visible-sm {
+        display: none;
+    }
+    .@{prefix}visible-md {
+        display: block;
+    }
+}
