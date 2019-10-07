@@ -1,11 +1,11 @@
 /**
- * FormBuilder is a global option that is responsible for build the embed code.
+ * FormBuilder is a global object that is responsible for build the embed code.
  */
 FormBuilder.build({
     /**
      * This is one of the built-in templates we are using for this instance.
      * One instance only can use one template but multi instances can share the same template.
-     * If you want more templates, let checkout the code and create an other one. All the built-in
+     * If you want more templates, let checkout the core code and create an other one. All the built-in
      * templates locate at src/templates directory.
      */
     template: 'cta-image',
@@ -17,7 +17,7 @@ FormBuilder.build({
         title: "This is an example of CTA image",
         cta_url: 'http://example.com',
         // Note that, for asset url (images, videos,...) you can pass a full url (http:://..) or use relative path
-        // if you hosted the assets in the same place with this source
+        // if you hosted the assets in the same place with this config file
         img_url: './assets/config_v1/image.jpg',
         open_new_tab: true,
         mobile: {

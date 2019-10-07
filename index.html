@@ -1,19 +1,100 @@
 <html>
   <head>
-    <link href="https://myCDN.com/prism@v1.x/themes/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script type="text/javascript" src="core.min.js"></script>
+
+    <!-- <script type="text/javascript">
+			document.write('\x3Cscript type="text/javascript" src="core.min.js?v=' + (new Date()).getTime() + '">\x3C/script>');
+		</script> -->
   </head>
   <body>
-    <h1>Config V1 - Usage</h1>
-    <script type="text/javascript" src="config_v1.js"></script>
+    <div class="container">
+      <section>
+        <h1>Setup</h1>
+        <p>If you are going to host all instances (assets and config) in one place (eg: Amazon S3). Here is the directory structure you need:</p>
+        <ul>
+          <li><b>assets</b>: This directory contains all assets (images,videos,...). For example: <b>config_v1</b> is the asset directory of the <b>config_v1</b> instance. If you want to store the assets in a different place, that's okay because the tool works well with detached assets.
+            <ul>
+              <li>config_v1</li>
+              <li>...</li>
+              <li>config_vn</li>
+            </ul>
+          </li>
+          <li><b>custom</b>: This is the directory contains all your custom styles (css/less) that you want to override the style of the built-in templates.</li>
+          <li><b>core.min.js</b>: This is the core file responsible to build and display the templates.</li>
+          <li><b>config_v1.js</b>: This is an example config file of an instance</li>
+          <li><b>index.html</b>: This is a guide page contains the description about the tool, preview the templates, copy the embed code</li>
+        </ul>
+      </section>
+      <section>
+        <h1>How to embed</h1>
+        <pre>
+          <code class="language-html">
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                &lt;head&gt;
+                  &lt;meta charset=&quot;utf-8&quot; /&gt;
+                  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+                  &lt;title&gt;Page Title&lt;/title&gt;
+                  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+              
+                  &lt;!-- If you want to cache the core, use this code --&gt;
+                  &lt;script src=&quot;core.min.js&quot;&gt;&lt;/script&gt;
+              
+                  &lt;!-- And if you dont want to cache the core --&gt;
+                  &lt;script type=&quot;text/javascript&quot;&gt;
+                    document.write('\x3Cscript type=&quot;text/javascript&quot; src=&quot;core.min.js?v=' + (new Date()).getTime() + '&quot;&gt;\x3C/script&gt;');
+                  &lt;/script&gt;
+                &lt;/head&gt;
+              
+                &lt;body&gt;
+                  &lt;!-- Your embed code go here --&gt;
+                  &lt;script type=&quot;text/javascript&quot;&gt;
+                    document.write('\x3Cscript type=&quot;text/javascript&quot; src=&quot;config_v1.js?v=' + (new Date()).getTime() + '&quot;&gt;\x3C/script&gt;');
+                  &lt;/script&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;
+          </code>
+        </pre>
+      </section>
+      <section>
+        <h1>Config V1 - Usage</h1>
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width:30%;">Preview</th>
+              <th style="min-width:100px;">Template</th>
+              <th>Embed code</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <script type="text/javascript">
+                    document.write('\x3Cscript type="text/javascript" src="config_v1.js?v='+ (new Date()).getTime() +'">\x3C/script>');
+                </script>
+              </td>
+              <td>cta-image</td>
+              <td>
+                <code class="language-javascript">
+                  &lt;script type=&quot;text/javascript&quot;&gt;
+                    document.write('\x3Cscript type=&quot;text/javascript&quot; src=&quot;config_v1.js?v='+ (new Date()).getTime() +'&quot;&gt;\x3C/script&gt;');
+                  &lt;/script&gt;
+                </code>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+          <h1>About the tool</h1>
+          <p>The tool is made to build the embed templates by the configuration files, manage them in one place so we can maintain and update frequently.<br/>
+            It's built with Webpack with a goal that make it easy to extend in the future. 
+            The core code is maintained at the repo: <a target="_blank" href="https://github.com/tranquyetdev/simple-form-builder">simple-form-builder</a></p>
+        </section>
+    </div>
 
-    <h1>Config V1 - Instance 2</h1>
-    <script type="text/javascript" src="config_v1.js"></script>
-
-    <h1>Config V2 - Instance 1</h1>
-    <script type="text/javascript" src="config_v2.js"></script>
-
-    <script src="https://myCDN.com/prism@v1.x/components/prism-core.min.js"></script>
-	  <script src="https://myCDN.com/prism@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
   </body>
 </html>
