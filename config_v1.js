@@ -18,20 +18,26 @@ FormBuilder.build({
         cta_url: 'http://example.com',
         // Note that, for asset url (images, videos,...) you can pass a full url (http:://..) or use relative path
         // if you hosted the assets in the same place with this config file
-        img_url: './assets/config_v1/image.jpg',
+        img_url: 'https://shorthand-embed.s3.eu-west-2.amazonaws.com/assets/config_v1/image.jpg',
         open_new_tab: true,
+        // Configure how the image look (optional, default is "100%")
+        // Values should be a string, such as: "100%", "auto", "200px"
+        width: "100%",
+        height: "100%",
+        // For mobile only (optional)
         mobile: {
             cta_url: 'http://example.com',
-            img_url: './assets/config_v1/image-mobile.jpg',
+            img_url: 'https://shorthand-embed.s3.eu-west-2.amazonaws.com/assets/config_v1/image-mobile.jpg',
         },
+        // For tablet only (optional)
         tablet: {
             cta_url: 'http://example.com',
-            img_url: './assets/config_v1/image-mobile.jpg',
-        }
+            img_url: 'https://shorthand-embed.s3.eu-west-2.amazonaws.com/assets/config_v1/image-mobile.jpg',
+        },
     },
     /**
      * This is an optional config. Each template has its own built-in style, but in case of you wanna override something
      * Let create a CSS/LESS file in the 'custom' directory. This file will be loaded dynamically for each instance.
      */
-    custom_css: "config_v1.css"
+    custom_css: "https://shorthand-embed.s3.eu-west-2.amazonaws.com/custom/config_v1.css"
 });

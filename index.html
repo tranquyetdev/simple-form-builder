@@ -31,30 +31,30 @@
         <h1>How to embed</h1>
         <pre>
           <code class="language-html">
-              &lt;!DOCTYPE html&gt;
-              &lt;html&gt;
-                &lt;head&gt;
-                  &lt;meta charset=&quot;utf-8&quot; /&gt;
-                  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
-                  &lt;title&gt;Page Title&lt;/title&gt;
-                  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-              
-                  &lt;!-- If you want to cache the core, use this code --&gt;
-                  &lt;script src=&quot;core.min.js&quot;&gt;&lt;/script&gt;
-              
-                  &lt;!-- And if you dont want to cache the core --&gt;
-                  &lt;script type=&quot;text/javascript&quot;&gt;
-                    document.write('\x3Cscript type=&quot;text/javascript&quot; src=&quot;core.min.js?v=' + (new Date()).getTime() + '&quot;&gt;\x3C/script&gt;');
-                  &lt;/script&gt;
-                &lt;/head&gt;
-              
-                &lt;body&gt;
-                  &lt;!-- Your embed code go here --&gt;
-                  &lt;script type=&quot;text/javascript&quot;&gt;
-                    document.write('\x3Cscript type=&quot;text/javascript&quot; src=&quot;config_v1.js?v=' + (new Date()).getTime() + '&quot;&gt;\x3C/script&gt;');
-                  &lt;/script&gt;
-                &lt;/body&gt;
-              &lt;/html&gt;
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+            &lt;head&gt;
+                &lt;meta charset=&quot;utf-8&quot; /&gt;
+                &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+                &lt;title&gt;Page Title&lt;/title&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+            
+                &lt;!-- If you want to cache the core, use this code --&gt;
+                &lt;script src=&quot;https://shorthand-embed.s3.eu-west-2.amazonaws.com/core.min.js&quot;&gt;&lt;/script&gt;
+            
+                &lt;!-- And if you dont want to cache the core --&gt;
+                &lt;script type=&quot;text/javascript&quot;&gt;
+                document.write('\x3Cscript type=&quot;text/javascript&quot; src=&quot;https://shorthand-embed.s3.eu-west-2.amazonaws.com/core.min.js?v=' + (new Date()).getTime() + '&quot;&gt;\x3C/script&gt;');
+                &lt;/script&gt;
+            &lt;/head&gt;
+            
+            &lt;body&gt;
+                &lt;!-- Your embed code go here --&gt;
+                &lt;script type=&quot;text/javascript&quot;&gt;
+                document.write('\x3Cscript type=&quot;text/javascript&quot; src=&quot;https://shorthand-embed.s3.eu-west-2.amazonaws.com/config_v1.js?v=' + (new Date()).getTime() + '&quot;&gt;\x3C/script&gt;');
+                &lt;/script&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
           </code>
         </pre>
       </section>
@@ -92,6 +92,13 @@
           <p>The tool is made to build the embed templates by the configuration files, manage them in one place so we can maintain and update frequently.<br/>
             It's built with Webpack with a goal that make it easy to extend in the future. 
             The core code is maintained at the repo: <a target="_blank" href="https://github.com/tranquyetdev/simple-form-builder">simple-form-builder</a></p>
+      </section>
+      <section>
+          <div style="height:350px;">
+            <script type="text/javascript">
+              document.write('\x3Cscript type="text/javascript" src="config_v1.js?v='+ (new Date()).getTime() +'">\x3C/script>');
+            </script>
+          </div>
       </section>
     </div>
 

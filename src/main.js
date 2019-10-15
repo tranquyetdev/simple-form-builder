@@ -12,7 +12,7 @@ var FormBuilder = {
 
         // Load custom style if have
         if (config.custom_css){
-            document.write('<link rel="stylesheet" text="text/css" href="./custom/'+ config.custom_css +'"></link>');
+            document.write('<link rel="stylesheet" text="text/css" href="'+ config.custom_css +'"></link>');
         }
 
         // We need a prefix for each css class we use, so let prefix them
