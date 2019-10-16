@@ -20,10 +20,6 @@ FormBuilder.build({
         // if you hosted the assets in the same place with this config file
         img_url: 'https://shorthand-embed.s3.eu-west-2.amazonaws.com/assets/config_v1/image.jpg',
         open_new_tab: true,
-        // Configure how the image look (optional, default is "100%")
-        // Values should be a string, such as: "100%", "auto", "200px"
-        width: "100%",
-        height: "100%",
         // For mobile only (optional)
         mobile: {
             cta_url: 'http://example.com',

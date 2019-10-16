@@ -2,9 +2,7 @@
     class="{{prefix}}cta-url" 
     href="{{ cta_url }}" 
     target="{{ open_new_tab is defined and open_new_tab == true ? '_blank' : '' }}" 
-    rel="nofollow"
-    style="width:{{ width ? width : "100%" }};height:{{ height ? height : "100%" }};"
-    >
+    rel="nofollow">
     <div class="{{prefix}}bg-cover" style="background-image:url({{ md.mobile() and mobile.img_url ? mobile.img_url : img_url }});">
     </div>
 </a>
